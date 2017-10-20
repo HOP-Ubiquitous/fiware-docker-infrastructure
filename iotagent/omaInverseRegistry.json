@@ -1,0 +1,80 @@
+{
+  "physicalUrl": {
+    "objectResource": 0,
+    "objectType": "10000",
+    "objectInstance": 0,
+    "operations": "RW"
+  },
+  "availability": {
+    "objectResource": 1,
+    "objectType": "10000",
+    "objectInstance": 0,
+    "operations": "RW"
+  },
+  "signalStrengh": {
+    "objectResource": 2,
+    "objectType": "10000",
+    "objectInstance": 0,
+    "operations": "RW"
+  },
+  "area": {
+    "objectResource": 3,
+    "objectType": "10000",
+    "objectInstance": 0,
+    "operations": "RW"
+  },
+  "interval": {
+    "objectResource": 4,
+    "objectType": "10000",
+    "objectInstance": 0,
+    "operations": "RW"
+  },
+  "bluetoothChannel": {
+    "objectResource": 5,
+    "objectType": "10000",
+    "objectInstance": 0,
+    "operations": "RW"
+  },
+  "temperature": {
+    "objectResource": 5700,
+    "objectType": "3303",
+    "objectInstance": 1,
+    "operations": "R"
+  },
+  "relativeHumidity": {
+    "objectResource": 5700,
+    "objectType": "3304",
+    "objectInstance": 1,
+    "operations": "R"
+  },
+  "NO2": {
+    "objectResource": 5700,
+    "objectType": "3300",
+    "objectInstance": 0,
+    "operations": "R"
+  },
+  "SO2": {
+    "objectResource": 5700,
+    "objectType": "3300",
+    "objectInstance": 1,
+    "operations": "R"
+  },
+  "O3": {
+    "objectResource": 5700,
+    "objectType": "3300",
+    "objectInstance": 2,
+    "operations": "R"
+  },
+  "CO": {
+    "objectResource": 5700,
+    "objectType": "3300",
+    "objectInstance": 3,
+    "operations": "R"
+  },
+  "H2S": {
+    "objectResource": 5700,
+    "objectType": "3300",
+    "objectInstance": 4,
+    "operations": "R"
+  }
+}
