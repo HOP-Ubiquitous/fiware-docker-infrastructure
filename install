@@ -1,0 +1,31 @@
+Manual para el despliegue de la infraestructura de HOPU-FIWARE.
+
+REQUISITOS:
+Los siguientes paquetes son necesarios: 
+- docker-ce
+- docker-compose
+
+CONSTRUIR IOTAGENT:
+Dentro del directorio iotagent ejecuta el comando:
+- docker build -t "iotagent:latest" .
+
+AÑADIR config.js A IOTAGENT:
+Para que el iotagent reciba su configuración debe existir un fichero config.js en el directorio docker-compose. Este directorio incluirá la información que debe mapear entre los dispositivos y el orion.
+
+CONFIGURAR CYGNUS:
+Para poder configurar los canales y bases de datos en los que se persistirá la información es necesario configurar el fichero agent.conf en el directorio docker-compose/.
+Este fichero será cargado dentro del container docker como fichero de configuración. 
+Un ejemplo del fichero que se carga por defecto puede encontrarse en la siguiente url: 
+https://github.com/telefonicaid/fiware-cygnus/blob/master/docker/cygnus-ngsi/agent.conf
+En el podemos ver como inicializar cada uno de los distintos conectores a bases de datos.
+Para simplificar el debug mejor añadir únicamente los necesarios.
+
+
+COMANDOS SOBRE DOCKER-COMPOSE:
+Lanzar infraestructura -> docker-compose up
+Lanzar infraestructura en segundo plano -> docker-compose up -d
+Parar infraestructura -> docker-compose down
+
+COMUNICACIÓN ORION-CYGNUS:
+Para conseguir que la información que llega a Orion sea persistente es necesario crear subscripciones sobre Orion estableciendo Cygnus como la url del callback.
+Un ejemplo de la suscripción a crear puede encontrarse en la colección postman dentro del directorio principal.

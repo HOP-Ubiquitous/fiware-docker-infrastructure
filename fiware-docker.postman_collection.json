@@ -1,0 +1,197 @@
+{
+	"variables": [],
+	"info": {
+		"name": "fiware-docker",
+		"_postman_id": "85ffca3a-5857-3a9e-f736-7a12d23c882c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Suscripción Orion Cygnus",
+			"request": {
+				"url": "http://localhost:1026/v1/subscribeContext",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "fiware-service",
+						"value": "SmartSpot",
+						"description": ""
+					},
+					{
+						"key": "fiware-servicepath",
+						"value": "/smartspot",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"entities\": [\n        {\n            \"type\": \"SmartSpot\",\n            \"isPattern\": \"true\",\n            \"id\": \".*\"\n        }\n    ],\n    \"attributes\": [\n        \"CO\"\n    ],             \n    \"reference\": \"http://cygnus:5050/notify\",\n    \"duration\": \"P1M\"\n}    "
+				},
+				"description": "Esta petición crea una suscripción en Orion estableciendo como dirección la url del callback de cygnus. \nentities: se establece el type, si se usa una regex y en el caso de ser true, .* es equivalente a any.\nattributes: se deben añadir cada uno de los atributos para los que se quiere recibir una notificación.\nreference: url callback.\nduration: tiempo durante el cuál la suscripción funcionará. P1M -> 1 month."
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve raw historical context data",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8666/STH/v1/contextEntities/type/SmartSpot/id/SmartSpot_FIRA:SmartSpot/attributes/CO?hLimit=10&hOffset=0&dateFrom=2017-10-01T00:00:00.000Z&dateTo=2017-10-31T23:59:59.999Z",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8666",
+					"path": [
+						"STH",
+						"v1",
+						"contextEntities",
+						"type",
+						"SmartSpot",
+						"id",
+						"SmartSpot_FIRA:SmartSpot",
+						"attributes",
+						"CO"
+					],
+					"query": [
+						{
+							"key": "hLimit",
+							"value": "10",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "hOffset",
+							"value": "0",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "dateFrom",
+							"value": "2017-10-01T00:00:00.000Z",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "dateTo",
+							"value": "2017-10-31T23:59:59.999Z\n",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "fiware-service",
+						"value": "smartspot",
+						"description": ""
+					},
+					{
+						"key": "fiware-servicepath",
+						"value": "/smartspot",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Realiza una petición GET sobre la dirección y puerto en que se encuentra desplegado STH estableciendo en la uri: type, entity_id, attributes. \nMás información sobre los parámetros puede encontrarse en:\nhttps://fiware-sth-comet.readthedocs.io/en/latest/raw-data-retrieval/index.html\nEs necesario añadir como cabeceras el fiware-service y fiware-servicepath sobre el que se pregunta. Si no se conoce lanzar docker-compose en primer plano y ver los logs de cygnus puede ayudar"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8666/STH/v1/contextEntities/type/SmartSpot/id/SmartSpot_FIRA:SmartSpot/attributes/CO?aggrMethod=sum&aggrPeriod=second&dateFrom=2017-10-01T00:00:00.000Z&dateTo=2017-10-31T23:59:59.999Z",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8666/STH/v1/contextEntities/type/SmartSpot/id/SmartSpot_FIRA:SmartSpot/attributes/CO?aggrMethod=sum&aggrPeriod=second&dateFrom=2017-10-01T00:00:00.000Z&dateTo=2017-10-31T23:59:59.999Z",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8666",
+					"path": [
+						"STH",
+						"v1",
+						"contextEntities",
+						"type",
+						"SmartSpot",
+						"id",
+						"SmartSpot_FIRA:SmartSpot",
+						"attributes",
+						"CO"
+					],
+					"query": [
+						{
+							"key": "aggrMethod",
+							"value": "sum",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "aggrPeriod",
+							"value": "second",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "dateFrom",
+							"value": "2017-10-01T00:00:00.000Z",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "dateTo",
+							"value": "2017-10-31T23:59:59.999Z",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "fiware-service",
+						"value": "smartspot",
+						"description": ""
+					},
+					{
+						"key": "fiware-servicepath",
+						"value": "/smartspot",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Realiza una petición GET sobre la dirección y puerto en que se encuentra desplegado STH estableciendo en la uri: type, entity_id, attributes. \nMás información sobre los parámetros puede encontrarse en:\nhttps://fiware-sth-comet.readthedocs.io/en/latest/aggregated-data-retrieval/index.html\nEs necesario añadir como cabeceras el fiware-service y fiware-servicepath sobre el que se pregunta. Si no se conoce lanzar docker-compose en primer plano y ver los logs de cygnus puede ayudar"
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Orion entities",
+			"request": {
+				"url": "http://localhost:1026/v2/entities",
+				"method": "GET",
+				"header": [
+					{
+						"key": "fiware-service",
+						"value": "SmartSpot",
+						"description": ""
+					},
+					{
+						"key": "fiware-servicepath",
+						"value": "/smartspot",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

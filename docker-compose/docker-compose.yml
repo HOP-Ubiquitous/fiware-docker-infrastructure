@@ -1,0 +1,75 @@
+version: '3'
+
+services:
+ mongo:
+   image: mongo:3.2
+   ports:
+     - "27016:27017"
+   command: --nojournal
+   networks:
+     fiwareNetwork:
+       aliases:
+         - mongo
+
+ orion:
+   image: fiware/orion
+   ports:
+     - "1026:1026"
+   command:
+     -dbhost mongo
+     -corsOrigin __ALL
+   networks:
+     fiwareNetwork:
+       aliases:
+         - orion
+   depends_on:
+     - mongo
+
+ iotagent:
+   image: iotagent
+   ports:
+     - "5683:5683/udp"
+   volumes:
+     - "./config.js:/opt/iota-lwm2m/config.js"
+   networks:
+     fiwareNetwork:
+       aliases:
+         - iotagent
+   depends_on:
+     - mongo
+     - orion
+
+ cygnus:
+   image: fiware/cygnus-ngsi
+   ports: 
+     - "8081:8081"
+   volumes: 
+     - "./agent.conf:/opt/apache-flume/conf/agent.conf"
+   networks:
+     fiwareNetwork:
+       aliases:
+         - cygnus
+   depends_on:
+     - mongo
+
+ sth:
+   image: telefonicaiot/fiware-sth-comet
+   ports:
+     - "8666:8666"
+   environment:
+     - STH_HOST=0.0.0.0
+     - DB_URI=mongo:27017
+   networks:
+     fiwareNetwork:
+       aliases:
+         - cygnus
+   depends_on:
+     - mongo
+
+networks:
+  fiwareNetwork:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.0.0.0/28
+
