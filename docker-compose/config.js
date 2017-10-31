@@ -57,15 +57,15 @@ config.ngsi = {
 
 								{
                     name: 'latitude',
-                    type: 'Float'
+                    type: 'Number'
                 },
 								{
                     name: 'longitude',
-                    type: 'Float'
+                    type: 'Number'
                 },
 								{
                     name: 'altitude',
-                    type: 'Float'
+                    type: 'Number'
                 },
 								{
                     name: 'timestamp',
@@ -73,7 +73,7 @@ config.ngsi = {
                 },
 								{
                     name: 'speed',
-                    type: 'Float'
+                    type: 'Number'
                 },
 
 								{
@@ -90,46 +90,46 @@ config.ngsi = {
 
                 {
                     name: 'temperature0',
-                    type: 'Float'
+                    type: 'Number'
                 },
                 {
                     name: 'temperature1',
-                    type: 'Float'
+                    type: 'Number'
                 },
 
                 {
                     name: 'humidity0',
-                    type: 'Float'
+                    type: 'Number'
                 },
                 {
                     name: 'humidity1',
-                    type: 'Float'
+                    type: 'Number'
                 },
 
                 {
                     name: 'noise',
-                    type: 'Float'
+                    type: 'Number'
                 },
 
                 {
                     name: 'NO2',
-                    type: 'Float'
+                    type: 'Number'
                 },
                 {
                     name: 'SO2',
-                    type: 'Float'
+                    type: 'Number'
                 },
                 {
                     name: 'O3',
-                    type: 'Float'
+                    type: 'Number'
                 },
                 {
                     name: 'H2S',
-                    type: 'Float'
+                    type: 'Number'
                 },
                 {
                     name: 'CO',
-                    type: 'Float'
+                    type: 'Number'
                 },
 
                 {
@@ -257,7 +257,7 @@ config.ngsi = {
                     objectResource: 2
                 },
                 'nearDevicesHour': {
-                    objectType: 10002,
+                    objectType: 10001,
                     objectInstance: 0,
                     objectResource: 3
                 }
