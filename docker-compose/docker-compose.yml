@@ -20,6 +20,7 @@ services:
    command:
      -dbhost mongo
      -corsOrigin __ALL
+     -logLevel DEBUG
    networks:
      fiwareNetwork:
        aliases:
@@ -30,7 +31,7 @@ services:
  iotagent:
    image: iotagent
    ports:
-     - "5683:5683/udp"
+     - "5693:5683/udp"
    volumes:
      - "./config.js:/opt/iota-lwm2m/config.js"
    networks:
