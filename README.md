@@ -1,5 +1,20 @@
-# fiware-docker-infrastructure
+# FIWARE-Docker-infrastructure
 
+### Description
+This repository contains a easy way to deploy a FIWARE infrastructure through docker compose  
+
+### Architecture
+<br>
+
+![alt text](https://raw.githubusercontent.com/HOP-Ubiquitous/fiware-docker-infrastructure/master/images/architecture.png "Logo Title Text 1")
+
+<br>
+
+### Docker Architecture
+
+All the services share the subnet and will be reachable through the dns namespaces provided by docker. 
+
+![alt text](https://raw.githubusercontent.com/HOP-Ubiquitous/fiware-docker-infrastructure/master/images/network.png "Logo Title Text 1")
 
 ### Install and Deploy
 
