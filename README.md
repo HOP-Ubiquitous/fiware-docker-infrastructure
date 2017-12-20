@@ -74,7 +74,7 @@ https://github.com/HOP-Ubiquitous/fiware-docker-infrastructure/blob/master/fiwar
 
 
 ***
-
+<p align="center">
 <img src="http://www.hopu.eu/wp-content/uploads/2016/05/HOP_LOGO_NEW_LINE.png" width=300/>
 <img src="http://www.fiware4industry.com/wp-content/uploads/2015/11/FIWARE-for-Industry.png" width=300/>
-
+<p>
