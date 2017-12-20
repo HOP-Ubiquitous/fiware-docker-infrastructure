@@ -6,7 +6,7 @@ This repository contains a easy way to deploy a FIWARE infrastructure through do
 ### Architecture
 <br>
 
-![alt text](https://raw.githubusercontent.com/HOP-Ubiquitous/fiware-docker-infrastructure/master/images/architecture.png "Logo Title Text 1")
+![alt text](https://raw.githubusercontent.com/HOP-Ubiquitous/fiware-docker-infrastructure/master/images/architecture.png "Architecture image")
 
 <br>
 
@@ -14,7 +14,7 @@ This repository contains a easy way to deploy a FIWARE infrastructure through do
 
 All the services share the subnet and will be reachable through the dns namespaces provided by docker. 
 
-![alt text](https://raw.githubusercontent.com/HOP-Ubiquitous/fiware-docker-infrastructure/master/images/network.png "Logo Title Text 1")
+![alt text](https://raw.githubusercontent.com/HOP-Ubiquitous/fiware-docker-infrastructure/master/images/network.png "Docker network image")
 
 ### Install and Deploy
 
@@ -29,7 +29,7 @@ All the services share the subnet and will be reachable through the dns namespac
 Within the IoTAgent folder execute:
 
 ```
-$ docker build -t "iotagent: latest"
+$ docker build -t "iotagent:latest" .
 ```
 
 In order for the iotagent to receive its configuration, a config.js 
@@ -71,3 +71,10 @@ In order to get the information that reaches Orion to be persistent, it is neces
 An example of the subscription to create can be found in the postman collection within the main directory.
 
 https://github.com/HOP-Ubiquitous/fiware-docker-infrastructure/blob/master/fiware-docker.postman_collection.json
+
+
+***
+-------
+
+![alt=drawing text](http://www.hopu.eu/wp-content/uploads/2016/05/HOP_LOGO_NEW_LINE.png "Hopu Logo")
+![alt text](http://www.fiware4industry.com/wp-content/uploads/2015/11/FIWARE-for-Industry.png "Fiware Logo")
