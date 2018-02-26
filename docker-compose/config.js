@@ -79,35 +79,27 @@ config.ngsi = {
 								{
                     name: 'physicalUrl',
                     type: 'String'
-                }
+                },
+
+		{
+                    name: 'batteryLevel',
+                    type: 'Integer'
+		},
+
+		{
+                    name: 'noise',
+                    type: 'Number'
+		}
             ],
             active: [
 
                 {
-                    name: 'batteryLevel',
-                    type: 'Integer'
-                },
-
-                {
-                    name: 'temperature0',
-                    type: 'Number'
-                },
-                {
-                    name: 'temperature1',
+                    name: 'temperature',
                     type: 'Number'
                 },
 
                 {
-                    name: 'humidity0',
-                    type: 'Number'
-                },
-                {
-                    name: 'humidity1',
-                    type: 'Number'
-                },
-
-                {
-                    name: 'noise',
+                    name: 'humidity',
                     type: 'Number'
                 },
 
@@ -192,25 +184,15 @@ config.ngsi = {
                     objectResource: 9
                 },
 
-                'temperature0': {
+                'temperature': {
                     objectType: 3303,
                     objectInstance: 0,
-                    objectResource: 5700
-                },
-                'temperature1': {
-                    objectType: 3303,
-                    objectInstance: 1,
                     objectResource: 5700
                 },
 
-                'humidity0': {
+                'humidity': {
                     objectType: 3304,
                     objectInstance: 0,
-                    objectResource: 5700
-                },
-                'humidity1': {
-                    objectType: 3304,
-                    objectInstance: 1,
                     objectResource: 5700
                 },
 
@@ -272,4 +254,5 @@ config.ngsi = {
 };
 
 module.exports = config;
+
 

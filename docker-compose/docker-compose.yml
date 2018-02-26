@@ -34,6 +34,7 @@ services:
      - "5693:5683/udp"
    volumes:
      - "./config.js:/opt/iota-lwm2m/config.js"
+   restart: on-failure
    networks:
      fiwareNetwork:
        aliases:
@@ -107,6 +108,37 @@ services:
      fiwareNetwork:
        aliases:
          - grafana
+
+ perseo-core:
+   image: telefonicaiot/perseo-core
+   ports: 
+     - "8080:8080"
+   depends_on:
+     - mongo
+     - orion
+   command: -perseo_fe_url perseo-fe:9090
+   networks:
+     fiwareNetwork:
+       aliases:
+         - perseo-core
+
+ perseo-fe:
+   image: telefonicaiot/perseo-fe
+   ports: 
+     - "9090:9090"
+   depends_on:
+     - mongo
+     - orion
+     - perseo-core
+   environment:
+     - PERSEO_MONGO_ENDPOINT=mongo
+     - PERSEO_CORE_URL=http://perseo-core:8080
+     - PERSEO_LOG_LEVEL=debug
+     - PERSEO_ORION_URL=http://orion:1026/v1/updateContext
+   networks:
+     fiwareNetwork:
+       aliases:
+         - perseo-fe
 
 networks:
   fiwareNetwork:
