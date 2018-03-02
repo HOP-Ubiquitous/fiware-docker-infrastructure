@@ -1,0 +1,47 @@
+{
+	"info": {
+		"name": "fiware-iotagent",
+		"_postman_id": "ec2542ff-9255-8666-f80d-74e23eb617d2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create device provisioning",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "fiware-service",
+						"value": "hopu"
+					},
+					{
+						"key": "fiware-servicepath",
+						"value": "/smartspot/1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"devices\": [\n      {\n        \"device_id\": \"HOP2\",\n        \"entity_type\": \"smartspot\",\n        \"attributes\": [\n          {\n          \"name\": \"batteryLevel\",\n          \"type\": \"Integer\"\n      },\n\n      {\n          \"name\": \"temperature\",\n          \"type\": \"Number\"\n      },\n\n      {\n          \"name\": \"humidity\",\n          \"type\": \"Number\"\n      },\n\n      {\n          \"name\": \"noise\",\n          \"type\": \"Number\"\n      },\n\n      {\n          \"name\": \"NO2\",\n          \"type\": \"Number\"\n      },\n      {\n          \"name\": \"SO2\",\n          \"type\": \"Number\"\n      },\n      {\n          \"name\": \"O3\",\n          \"type\": \"Number\"\n      },\n      {\n          \"name\": \"H2S\",\n          \"type\": \"Number\"\n      },\n      {\n          \"name\": \"CO\",\n          \"type\": \"Number\"\n      },\n\n      {\n          \"name\": \"nearDevicesMinute\",\n          \"type\": \"Integer\"\n      },\n      {\n          \"name\": \"nearDevicesTenMinutes\",\n          \"type\": \"Integer\"\n      },\n      {\n          \"name\": \"nearDevicesHour\",\n          \"type\": \"Integer\"\n      }\n        ],\n        \"lazy\": [\n      {\n            \"name\": \"batteryStatus\",\n            \"type\": \"Integer\"\n          },\n\n      {\n            \"name\": \"latitude\",\n            \"type\": \"Number\"\n          },\n      {\n            \"name\": \"longitude\",\n            \"type\": \"Number\"\n          },\n      {\n            \"name\": \"physicalUrl\",\n            \"type\": \"String\"\n          }\n        ],\n        \"commands\": [],\n      \"internal_attributes\": {\n        \"lwm2mResourceMapping\": {\n        \"batteryStatus\": {\n            \"objectType\": 3,\n            \"objectInstance\": 0,\n            \"objectResource\": 20\n        },\n    \n        \"batteryLevel\": {\n            \"objectType\": 3,\n            \"objectInstance\": 0,\n            \"objectResource\": 9\n        },\n    \n        \"latitude\": {\n            \"objectType\": 6,\n            \"objectInstance\": 0,\n            \"objectResource\": 0\n        },\n        \"longitude\": {\n            \"objectType\": 6,\n            \"objectInstance\": 0,\n            \"objectResource\": 1\n        },\n    \n        \"physicalUrl\": {\n            \"objectType\": 10000,\n            \"objectInstance\": 0,\n            \"objectResource\": 0\n        },\n    \n        \"temperature\": {\n            \"objectType\": 3303,\n            \"objectInstance\": 0,\n            \"objectResource\": 5700\n        },\n    \n        \"humidity\": {\n            \"objectType\": 3304,\n            \"objectInstance\": 0,\n            \"objectResource\": 5700\n        },\n    \n        \"noise\": {\n            \"objectType\": 3324,\n            \"objectInstance\": 0,\n            \"objectResource\": 5700\n        },\n    \n        \"NO2\": {\n            \"objectType\": 3325,\n            \"objectInstance\": 0,\n            \"objectResource\": 5700\n        },\n        \"SO2\": {\n            \"objectType\": 3325,\n            \"objectInstance\": 1,\n            \"objectResource\": 5700\n        },\n        \"O3\": {\n            \"objectType\": 3325,\n            \"objectInstance\": 2,\n            \"objectResource\": 5700\n        },\n        \"H2S\": {\n            \"objectType\": 3325,\n            \"objectInstance\": 3,\n            \"objectResource\": 5700\n        },\n        \"CO\": {\n            \"objectType\": 3325,\n            \"objectInstance\": 4,\n            \"objectResource\": 5700\n        },\n    \n        \"nearDevicesMinute\": {\n            \"objectType\": 10001,\n            \"objectInstance\": 0,\n            \"objectResource\": 1\n        },\n        \"nearDevicesTenMinutes\": {\n            \"objectType\": 10001,\n            \"objectInstance\": 0,\n            \"objectResource\": 2\n        },\n        \"nearDevicesHour\": {\n            \"objectType\": 10001,\n            \"objectInstance\": 0,\n            \"objectResource\": 3\n        }\n    }\n      }\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "http://{{url}}:{{port-iotagent}}/iot/devices",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"port": "{{port-iotagent}}",
+					"path": [
+						"iot",
+						"devices"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		}
+	]
+}

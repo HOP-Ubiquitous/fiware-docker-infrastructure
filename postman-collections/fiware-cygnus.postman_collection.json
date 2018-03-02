@@ -1,0 +1,2050 @@
+{
+	"info": {
+		"name": "fiware-cygnus",
+		"_postman_id": "466bc4d9-cc13-da68-c9a6-348ef5571adc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "v0",
+			"item": [
+				{
+					"name": "retrieve admin log v0",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "{{fiware-service}}"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "{{fiware-servicepath}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port-cygnus}}/admin/log",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port-cygnus}}",
+							"path": [
+								"admin",
+								"log"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update admin log v0",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "{{fiware-service}}"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "{{fiware-servicepath}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port-cygnus}}/admin/log?level={{fiware-logLevel}}",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port-cygnus}}",
+							"path": [
+								"admin",
+								"log"
+							],
+							"query": [
+								{
+									"key": "level",
+									"value": "{{fiware-logLevel}}",
+									"equals": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create agent param v0",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "{{fiware-service}}"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "{{fiware-servicepath}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port-cygnus}}/admin/configuration/agent/cygnus/apache-flume-1.4.0-bin/conf/{{fiware-agent}}?param={{fiware-param}}&value={{fiware-paramValue}}",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port-cygnus}}",
+							"path": [
+								"admin",
+								"configuration",
+								"agent",
+								"cygnus",
+								"apache-flume-1.4.0-bin",
+								"conf",
+								"{{fiware-agent}}"
+							],
+							"query": [
+								{
+									"key": "param",
+									"value": "{{fiware-param}}",
+									"equals": true
+								},
+								{
+									"key": "value",
+									"value": "{{fiware-paramValue}}",
+									"equals": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retrieve agent parameter v0",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "{{fiware-service}}"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "{{fiware-service}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port-cygnus}}/admin/configuration/agent/cygnus/apache-flume-1.4.0-bin/conf/{{fiware-agent}}&param={{fiware-param}}",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port-cygnus}}",
+							"path": [
+								"admin",
+								"configuration",
+								"agent",
+								"cygnus",
+								"apache-flume-1.4.0-bin",
+								"conf",
+								"{{fiware-agent}}&param={{fiware-param}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retrieve agent parameters v0",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "{{fiware-service}}"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "{{fiware-servicepath}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port-cygnus}}/admin/configuration/agent/cygnus/apache-flume/conf/{{fiware-agent}}",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port-cygnus}}",
+							"path": [
+								"admin",
+								"configuration",
+								"agent",
+								"cygnus",
+								"apache-flume",
+								"conf",
+								"{{fiware-agent}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update agent parameter v0",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "{{fiware-service}}"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "{{fiware-servicepath}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port-cygnus}}/admin/configuration/agent/cygnus/apache-flume-1.4.0-bin/conf/{{fiware-agent}}?param={{fiware-param}}&value={{fiware-paramValue}}",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port-cygnus}}",
+							"path": [
+								"admin",
+								"configuration",
+								"agent",
+								"cygnus",
+								"apache-flume-1.4.0-bin",
+								"conf",
+								"{{fiware-agent}}"
+							],
+							"query": [
+								{
+									"key": "param",
+									"value": "{{fiware-param}}",
+									"equals": true
+								},
+								{
+									"key": "value",
+									"value": "{{fiware-paramValue}}",
+									"equals": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete agent parameter v0",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "{{fiware-service}}"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "{{fiware-servicepath}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port-cygnus}}/admin/configuration/agent/cygnus/apache-flume-1.4.0-bin/conf/{{fiware-param}}",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port-cygnus}}",
+							"path": [
+								"admin",
+								"configuration",
+								"agent",
+								"cygnus",
+								"apache-flume-1.4.0-bin",
+								"conf",
+								"{{fiware-param}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create instance param v0",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "{{fiware-service}}"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "{{fiware-servicepath}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port-cygnus}}/admin/configuration/instance/usr/cygnus/conf/{{fiware-instance}}?param={{fiware-param}}&value={{fiware-paramValue}}",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port-cygnus}}",
+							"path": [
+								"admin",
+								"configuration",
+								"instance",
+								"usr",
+								"cygnus",
+								"conf",
+								"{{fiware-instance}}"
+							],
+							"query": [
+								{
+									"key": "param",
+									"value": "{{fiware-param}}",
+									"equals": true
+								},
+								{
+									"key": "value",
+									"value": "{{fiware-paramValue}}",
+									"equals": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retrieve instance param v0",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "{{fiware-service}}"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "{{fiware-servicepath}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port-cygnus}}/admin/configuration/instance/usr/cygnus/conf/cygnus_instance.conf?param={{fiware-instance}}",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port-cygnus}}",
+							"path": [
+								"admin",
+								"configuration",
+								"instance",
+								"usr",
+								"cygnus",
+								"conf",
+								"cygnus_instance.conf"
+							],
+							"query": [
+								{
+									"key": "param",
+									"value": "{{fiware-instance}}",
+									"equals": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retrieve instance params v0",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "{{fiware-service}}"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "{{fiware-servicepath}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port-cygnus}}/admin/configuration/instance/usr/cygnus/conf/{{fiware-instance}}",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port-cygnus}}",
+							"path": [
+								"admin",
+								"configuration",
+								"instance",
+								"usr",
+								"cygnus",
+								"conf",
+								"{{fiware-instance}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update instance param v0",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "{{fiware-service}}"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "{{fiware-service}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port-cygnus}}/admin/configuration/instance/usr/cygnus/conf/{{fiware-instance}}?param={{fiware-param}}&value={{fiware-paramValue}}",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port-cygnus}}",
+							"path": [
+								"admin",
+								"configuration",
+								"instance",
+								"usr",
+								"cygnus",
+								"conf",
+								"{{fiware-instance}}"
+							],
+							"query": [
+								{
+									"key": "param",
+									"value": "{{fiware-param}}",
+									"equals": true
+								},
+								{
+									"key": "value",
+									"value": "{{fiware-paramValue}}",
+									"equals": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete instance v0",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "{{fiware-service}}"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "{{fiware-servicepath}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port-cygnus}}/admin/configuration/instance/usr/cygnus/conf/{{fiware-instance}}?param={{fiware-param}}",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port-cygnus}}",
+							"path": [
+								"admin",
+								"configuration",
+								"instance",
+								"usr",
+								"cygnus",
+								"conf",
+								"{{fiware-instance}}"
+							],
+							"query": [
+								{
+									"key": "param",
+									"value": "{{fiware-param}}",
+									"equals": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "v1 beta",
+			"item": [
+				{
+					"name": "stats",
+					"item": [
+						{
+							"name": "retrieve stats v1",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-cygnus}}/v1/stats",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-cygnus}}",
+									"path": [
+										"v1",
+										"stats"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "reset stats",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-cygnus}}/v1/stats",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-cygnus}}",
+									"path": [
+										"v1",
+										"stats"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "version",
+					"item": [
+						{
+							"name": "retrieve version",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}} "
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-cygnus}}/v1/version",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-cygnus}}",
+									"path": [
+										"v1",
+										"version"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "grouping rules",
+					"item": [
+						{
+							"name": "create grouping rules",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"regex\": \"SmartSpot\",\r\n    \"destination\": \"othersmartspots\",\r\n    \"fiware_service_path\": \"/smartspot\",\r\n    \"fields\": [\"CO2\",\"N2O\",\"batteryLevel\"]\r\n}\r\n\r\n\r\n"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-cygnus}}/v1/groupingrules",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-cygnus}}",
+									"path": [
+										"v1",
+										"groupingrules"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve grouping rules",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-cygnus}}/v1/groupingrules",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-cygnus}}",
+									"path": [
+										"v1",
+										"groupingrules"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update grouping rules",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"regex\": \"SmartSpot\",\r\n    \"destination\": \"othersmartspots\",\r\n    \"fiware_service_path\": \"/smartspot\",\r\n    \"fields\": [\"actType\"]\r\n}\r\n\r\n"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-cygnus}}/v1/groupingrules?id={{fiware-groupID}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-cygnus}}",
+									"path": [
+										"v1",
+										"groupingrules"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "{{fiware-groupID}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete grouping rules",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-cygnus}}/v1/groupingrules?id={{fiware-groupID}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-cygnus}}",
+									"path": [
+										"v1",
+										"groupingrules"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "{{fiware-groupID}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "subscriptions",
+					"item": [
+						{
+							"name": "create subscribtion for Orion V1",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"subscription\":{\r\n          \"entities\": [\r\n              {\r\n                  \"type\": \"SmartSpot\",\r\n                  \"isPattern\": \"false\",\r\n                  \"id\": \"prueba_multinivel_f\"\r\n              }\r\n          ],\r\n          \"attributes\": [\r\n          \t\"batteryLevel\",\r\n        \t\"temperature0\",\r\n         \t\"temperature1\",\r\n    \t\t\"humidity0\",\r\n        \t\"humidity1\",\r\n        \t\"noise\",\r\n        \t\"NO2\",\r\n        \t\"SO2\",\r\n        \t\"O3\",\r\n        \t\"H2S\",\r\n        \t\"CO\",\r\n        \t\"nearDevicesMinute\",\r\n        \t\"nearDevicesTenMinutes\",\r\n        \t\"nearDevicesHour\"\r\n        ],\r\n          \"reference\": \"http://cygnus:5050/notify\",\r\n          \"duration\": \"P1M\",\r\n          \"notifyConditions\": [\r\n              {\r\n                  \"type\": \"ONCHANGE\",\r\n                  \"condValues\": []\r\n              }\r\n          ],\r\n          \"throttling\": \"PT5S\"\r\n    },\r\n    \"endpoint\":{\r\n          \"host\":\"endpoint_host\",\r\n          \"port\":\"endpoint_port\",\r\n          \"ssl\":\"false\",\r\n          \"xauthtoken\":\"234123123123123\"\r\n    }\r\n}"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-cygnus}}/v1/subscriptions?ngsi_version=1",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-cygnus}}",
+									"path": [
+										"v1",
+										"subscriptions"
+									],
+									"query": [
+										{
+											"key": "ngsi_version",
+											"value": "1",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create subscription for Orion V2",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"subscription\":{\r\n        \"description\": \"One subscription to rule them all\",\r\n        \"subject\": {\r\n            \"entities\": [\r\n                {\r\n                    \"idPattern\": \".*\",\r\n                    \"type\": \"SmartSpot\"\r\n                }\r\n            ],\r\n            \"condition\": {\r\n                \"attrs\": [\r\n                    \"temperature\"\r\n                ],\r\n                \"expression\": {\r\n                      \"q\": \"temperature>40\"\r\n                }\r\n            }\r\n        },\r\n        \"notification\": {\r\n            \"http\": {\r\n                \"url\": \"http://cygnus:5050/notify\"\r\n            },\r\n            \"attrs\": [\r\n                \"temperature\"\r\n            ]\r\n        },\r\n        \"expires\": \"2016-05-05T14:00:00.00Z\",\r\n        \"throttling\": 5\r\n    },\r\n    \"endpoint\":{\r\n        \"host\":\"<endpoint_host>\",\r\n        \"port\":\"<endpoint_port>\",\r\n        \"ssl\":\"false\",\r\n        \"xauthtoken\":\"QsENv67AJj7blC2qJ0YvfSc5hMWYrs\"\r\n    }\r\n}"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-cygnus}}/v1/subscriptions?ngsi_version=2",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-cygnus}}",
+									"path": [
+										"v1",
+										"subscriptions"
+									],
+									"query": [
+										{
+											"key": "ngsi_version",
+											"value": "2",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve subscription",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-cygnus}}/v1/subscriptions?ngsi_version=2&subscription_id={{fiware-subscription}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-cygnus}}",
+									"path": [
+										"v1",
+										"subscriptions"
+									],
+									"query": [
+										{
+											"key": "ngsi_version",
+											"value": "2",
+											"equals": true
+										},
+										{
+											"key": "subscription_id",
+											"value": "{{fiware-subscription}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve subscriptions",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "43a4481e-1c4e-47a0-9541-c38aa86e76d2",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-cygnus}}/v1/subscriptions?ngsi_version=2",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-cygnus}}",
+									"path": [
+										"v1",
+										"subscriptions"
+									],
+									"query": [
+										{
+											"key": "ngsi_version",
+											"value": "2",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete subscription",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-cygnus}}/v1/subscriptions?subscription_id={{fiware-subscription}}&ngsi_version={{fiware-orionVersion}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-cygnus}}",
+									"path": [
+										"v1",
+										"subscriptions"
+									],
+									"query": [
+										{
+											"key": "subscription_id",
+											"value": "{{fiware-subscription}}",
+											"equals": true
+										},
+										{
+											"key": "ngsi_version",
+											"value": "{{fiware-orionVersion}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "logs",
+					"item": [
+						{
+							"name": "create appender",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"appender\": {\r\n        \"name\":\"Name\",\r\n        \"class\":\".....\"\r\n      },\r\n      \"pattern\": {\r\n        \"layout\":\".....\",\r\n        \"ConversionPattern\":\".....\"  \r\n     }\r\n  }"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-cygnus}}/v1/admin/log/appenders?transient={{fiware-transient}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-cygnus}}",
+									"path": [
+										"v1",
+										"admin",
+										"log",
+										"appenders"
+									],
+									"query": [
+										{
+											"key": "transient",
+											"value": "{{fiware-transient}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve appender",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-cygnus}}/v1/admin/log/appenders?name={{fiware-appender}}&transient={{fiware-transient}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-cygnus}}",
+									"path": [
+										"v1",
+										"admin",
+										"log",
+										"appenders"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "{{fiware-appender}}",
+											"equals": true
+										},
+										{
+											"key": "transient",
+											"value": "{{fiware-transient}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve appenders",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-cygnus}}/v1/admin/log/appenders?transient={{fiware-transient}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-cygnus}}",
+									"path": [
+										"v1",
+										"admin",
+										"log",
+										"appenders"
+									],
+									"query": [
+										{
+											"key": "transient",
+											"value": "{{fiware-transient}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update appenders",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"appender\": {\r\n        \"name\":\".....\",\r\n        \"class\":\".....\"\r\n      },\r\n      \"pattern\": {\r\n        \"layout\":\".....\",\r\n        \"ConversionPattern\":\".....\"  \r\n      }\r\n  }"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-cygnus}}/v1/admin/log/appenders?transient={{fiware-transient}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-cygnus}}",
+									"path": [
+										"v1",
+										"admin",
+										"log",
+										"appenders"
+									],
+									"query": [
+										{
+											"key": "transient",
+											"value": "{{fiware-transient}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete appender",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-cygnus}} /v1/admin/log/appenders?name={{fiware-appender}}&transient={{fiware-transient}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-cygnus}} ",
+									"path": [
+										"v1",
+										"admin",
+										"log",
+										"appenders"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "{{fiware-appender}}",
+											"equals": true
+										},
+										{
+											"key": "transient",
+											"value": "{{fiware-transient}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete appenders",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-cygnus}} /v1/admin/log/appenders?transient={{fiware-transient}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-cygnus}} ",
+									"path": [
+										"v1",
+										"admin",
+										"log",
+										"appenders"
+									],
+									"query": [
+										{
+											"key": "transient",
+											"value": "{{fiware-transient}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create logger",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"logger\": {\r\n        \"name\":\".....\",\r\n        \"level\":\"WARN\"\r\n    }\r\n}\r\n\r\n"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-cygnus}} /v1/admin/log/loggers?transient={{fiware-transient}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-cygnus}} ",
+									"path": [
+										"v1",
+										"admin",
+										"log",
+										"loggers"
+									],
+									"query": [
+										{
+											"key": "transient",
+											"value": "{{fiware-transient}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve logger",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-cygnus}}/v1/admin/log/loggers?name={{fiware-logger}}&transient={{fiware-transient}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-cygnus}}",
+									"path": [
+										"v1",
+										"admin",
+										"log",
+										"loggers"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "{{fiware-logger}}",
+											"equals": true
+										},
+										{
+											"key": "transient",
+											"value": "{{fiware-transient}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve loggers",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-cygnus}}/v1/admin/log/loggers?transient={{fiware-transient}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-cygnus}}",
+									"path": [
+										"v1",
+										"admin",
+										"log",
+										"loggers"
+									],
+									"query": [
+										{
+											"key": "transient",
+											"value": "{{fiware-transient}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update logger",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"logger\": {\r\n        \"name\":\"org.mongodb\",\r\n        \"level\":\"WARN\"\r\n    }\r\n}"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-cygnus}} /v1/admin/log/loggers?transient={{fiware-transient}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-cygnus}} ",
+									"path": [
+										"v1",
+										"admin",
+										"log",
+										"loggers"
+									],
+									"query": [
+										{
+											"key": "transient",
+											"value": "{{fiware-transient}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete logger",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}} :{{port-cygnus}} /v1/admin/log/loggers?name={{fiware-logger}}&transient={{fiware-transient}}",
+									"protocol": "http",
+									"host": [
+										"{{url}} "
+									],
+									"port": "{{port-cygnus}} ",
+									"path": [
+										"v1",
+										"admin",
+										"log",
+										"loggers"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "{{fiware-logger}}",
+											"equals": true
+										},
+										{
+											"key": "transient",
+											"value": "{{fiware-transient}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete loggers",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}} :{{port-cygnus}} /v1/admin/log/loggers?transient={{fiware-transient}}",
+									"protocol": "http",
+									"host": [
+										"{{url}} "
+									],
+									"port": "{{port-cygnus}} ",
+									"path": [
+										"v1",
+										"admin",
+										"log",
+										"loggers"
+									],
+									"query": [
+										{
+											"key": "transient",
+											"value": "{{fiware-transient}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "metrics",
+					"item": [
+						{
+							"name": "retrieve metrics",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-cygnus}}/v1/admin/metrics?reset={{fiware-reset}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-cygnus}}",
+									"path": [
+										"v1",
+										"admin",
+										"metrics"
+									],
+									"query": [
+										{
+											"key": "reset",
+											"value": "{{fiware-reset}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete metrics",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-cygnus}}/v1/admin/metrics",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-cygnus}}",
+									"path": [
+										"v1",
+										"admin",
+										"metrics"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "create agent parameter",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port-cygnus}}/v1/admin/configuration/agent/cygnus/apache-flume-1.4.0-bin/conf?param={{fiware-param}}&value={{fiware-paramValue}}",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port-cygnus}}",
+							"path": [
+								"v1",
+								"admin",
+								"configuration",
+								"agent",
+								"cygnus",
+								"apache-flume-1.4.0-bin",
+								"conf"
+							],
+							"query": [
+								{
+									"key": "param",
+									"value": "{{fiware-param}}",
+									"equals": true
+								},
+								{
+									"key": "value",
+									"value": "{{fiware-paramValue}}",
+									"equals": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retrieve agent parameter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port-cygnus}}/v1/admin/configuration/agent/cygnus/apache-flume-1.4.0-bin/conf/{{fiware-param}}",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port-cygnus}}",
+							"path": [
+								"v1",
+								"admin",
+								"configuration",
+								"agent",
+								"cygnus",
+								"apache-flume-1.4.0-bin",
+								"conf",
+								"{{fiware-param}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retrieve agent parameters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port-cygnus}}/v1/admin/configuration/agent/cygnus/apache-flume-1.4.0-bin/conf/{{fiware-agent}}",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port-cygnus}}",
+							"path": [
+								"v1",
+								"admin",
+								"configuration",
+								"agent",
+								"cygnus",
+								"apache-flume-1.4.0-bin",
+								"conf",
+								"{{fiware-agent}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update agent parameter",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port-cygnus}}/v1/admin/configuration/agent/cygnus/apache-flume/conf/{{fiware-agent}}?param={{fiware-param}}&value={{fiware-paramValue}}",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port-cygnus}}",
+							"path": [
+								"v1",
+								"admin",
+								"configuration",
+								"agent",
+								"cygnus",
+								"apache-flume",
+								"conf",
+								"{{fiware-agent}}"
+							],
+							"query": [
+								{
+									"key": "param",
+									"value": "{{fiware-param}}",
+									"equals": true
+								},
+								{
+									"key": "value",
+									"value": "{{fiware-paramValue}}",
+									"equals": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete agent parameter",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port-cygnus}}/v1/admin/configuration/agent/cygnus/apache-flume/conf/{{fiware-agent}}?param={{fiware-param}}",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port-cygnus}}",
+							"path": [
+								"v1",
+								"admin",
+								"configuration",
+								"agent",
+								"cygnus",
+								"apache-flume",
+								"conf",
+								"{{fiware-agent}}"
+							],
+							"query": [
+								{
+									"key": "param",
+									"value": "{{fiware-param}}",
+									"equals": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create instance parameter",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port-cygnus}}/v1/admin/configuration/instance/usr/cygnus/conf/{{fiware-instance}}?param={{fiware-param}}&value={{fiware-paramValue}}",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port-cygnus}}",
+							"path": [
+								"v1",
+								"admin",
+								"configuration",
+								"instance",
+								"usr",
+								"cygnus",
+								"conf",
+								"{{fiware-instance}}"
+							],
+							"query": [
+								{
+									"key": "param",
+									"value": "{{fiware-param}}",
+									"equals": true
+								},
+								{
+									"key": "value",
+									"value": "{{fiware-paramValue}}",
+									"equals": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retrieve instance param",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port-cygnus}}/v1/admin/configuration/instance/usr/cygnus/conf/{{fiware-instance}}?param={{fiware-param}}",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port-cygnus}}",
+							"path": [
+								"v1",
+								"admin",
+								"configuration",
+								"instance",
+								"usr",
+								"cygnus",
+								"conf",
+								"{{fiware-instance}}"
+							],
+							"query": [
+								{
+									"key": "param",
+									"value": "{{fiware-param}}",
+									"equals": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retrieve instance params",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port-cygnus}}/v1/admin/configuration/instance/usr/cygnus/conf/{{fiware-instance}}",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port-cygnus}}",
+							"path": [
+								"v1",
+								"admin",
+								"configuration",
+								"instance",
+								"usr",
+								"cygnus",
+								"conf",
+								"{{fiware-instance}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update instance param",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port-cygnus}}/v1/admin/configuration/instance/usr/cygnus/conf/{{fiware-instance}}?param={{fiware-param}}&value={{fiware-paramValue}}",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port-cygnus}}",
+							"path": [
+								"v1",
+								"admin",
+								"configuration",
+								"instance",
+								"usr",
+								"cygnus",
+								"conf",
+								"{{fiware-instance}}"
+							],
+							"query": [
+								{
+									"key": "param",
+									"value": "{{fiware-param}}",
+									"equals": true
+								},
+								{
+									"key": "value",
+									"value": "{{fiware-paramValue}}",
+									"equals": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete parameter instance",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port-cygnus}}/v1/admin/configuration/instance/usr/cygnus/conf/{{fiware-instance}}?param={{fiware-param}}",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port-cygnus}}",
+							"path": [
+								"v1",
+								"admin",
+								"configuration",
+								"instance",
+								"usr",
+								"cygnus",
+								"conf",
+								"{{fiware-instance}}"
+							],
+							"query": [
+								{
+									"key": "param",
+									"value": "{{fiware-param}}",
+									"equals": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

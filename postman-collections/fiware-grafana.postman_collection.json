@@ -1,0 +1,38 @@
+{
+	"info": {
+		"name": "fiware-grafana",
+		"_postman_id": "104a91d7-07a8-bc16-429e-e0020ad77a8a",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "retrieve crate database",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"stmt\": \"SELECT * FROM \\\"doc\\\".\\\"etsmartspot\\\"\",\n  \"args\": [1508880754043,1508937650171]  \n}"
+				},
+				"url": {
+					"raw": "http://{{url}}:4200/_sql",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"port": "4200",
+					"path": [
+						"_sql"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		}
+	]
+}

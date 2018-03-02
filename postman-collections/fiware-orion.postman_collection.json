@@ -1,0 +1,2004 @@
+{
+	"info": {
+		"name": "fiware-orion",
+		"_postman_id": "04aafb9e-e8f1-03af-1927-81310eab5b3b",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "v1",
+			"item": [
+				{
+					"name": "check-is-alive",
+					"item": [
+						{
+							"name": "retrieve version",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/version",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"version"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "entities",
+					"item": [
+						{
+							"name": "create information entity v1",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"contextRegistrations\": [\r\n        {\r\n            \"entities\": [\r\n                {\r\n                    \"type\": \"SmartSpot\",\r\n                    \"isPattern\": \"false\",\r\n                    \"id\": \"Prueba_de_ubicacion_3\"\r\n                }\r\n            ],\r\n            \"attributes\": [\r\n                {\r\n\t\t\t\t\"name\": \"CO\",\r\n        \t\t\"type\": \"Number\",\r\n        \t\t\"isDomain\": \"false\"\r\n        \t\t},\r\n    \t\t\t{\r\n\t\t\t\t\"name\": \"H2S\",\r\n            \t\"type\": \"Number\",\r\n        \t\t\"isDomain\": \"false\"\r\n        \t\t},\r\n        \t\t{\r\n    \t\t\t\"name\":\"NO2\",\r\n            \t\"type\": \"Number\",\r\n        \t\t\"isDomain\": \"false\"\r\n        \t\t},\r\n        \t\t{\r\n    \t\t\t\"name\":\"O3\",\r\n            \t\"type\": \"Number\",\r\n        \t\t\"isDomain\": \"false\"\r\n        \t\t},\r\n        \t\t{\r\n    \t\t\t\"name\":\"SO2\",\r\n            \t\"type\": \"Number\",\r\n        \t\t\"isDomain\": \"false\"\r\n        \t\t},\r\n        \t\t{\r\n    \t\t\t\"name\":\"batteryLevel\",\r\n            \t\"type\": \"Integer\",\r\n        \t\t\"isDomain\": \"false\"\r\n        \t\t},\r\n        \t\t{\r\n    \t\t\t\"name\":\"humidity0\",\r\n            \t\"type\": \"Number\",\r\n        \t\t\"isDomain\": \"false\"\r\n        \t\t},\r\n        \t\t{\r\n    \t\t\t\"name\":\"humidity1\",\r\n            \t\"type\": \"Number\",\r\n        \t\t\"isDomain\": \"false\"\r\n        \t\t},\r\n        \t\t{\r\n    \t\t\t\"name\":\"nearDevicesHour\",\r\n            \t\"type\": \"Integer\",\r\n        \t\t\"isDomain\": \"false\"\r\n        \t\t},\r\n        \t\t{\r\n    \t\t\t\"name\":\"nearDevicesMinute\",\r\n            \t\"type\": \"Integer\",\r\n        \t\t\"isDomain\": \"false\"\r\n        \t\t},\r\n        \t\t{\r\n    \t\t\t\"name\":\"nearDevicesTenMinutes\",\r\n            \t\"type\": \"Integer\",\r\n        \t\t\"isDomain\": \"false\"\r\n        \t\t},\r\n    \t\t\t{\r\n    \t\t\t\"name\":\"noise\",\r\n            \t\"type\": \"Number\",\r\n        \t\t\"isDomain\": \"false\"\r\n        \t\t},\r\n        \t\t{\r\n    \t\t\t\"name\":\"temperature0\",\r\n            \t\"type\": \"Number\",\r\n        \t\t\"isDomain\": \"false\"\r\n        \t\t}\r\n            ],\r\n            \"providingApplication\": \"http://homard.hopu.eu:1026/v2/entities\"\r\n        }\r\n    ],\r\n    \"duration\": \"P1M\"\r\n}"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/registry/registerContext",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"registry",
+										"registerContext"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve information entity v1",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "c21c9c3d-f9d6-46e4-8961-a39aee7bc44e",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"entities\": [\r\n        {\r\n            \"type\": \"SmartSpot\",\r\n            \"isPattern\": \"false\",\r\n            \"id\": \"Prueba_de_ubicacion_3\"\r\n        }\r\n    ]\r\n} "
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/registry/discoverContextAvailability",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"registry",
+										"discoverContextAvailability"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create/update entity v1",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"contextElements\": [\r\n        {\r\n\t\t\"type\": \"SmartSpot\",\r\n\t\t\"isPattern\": \"false\",\r\n        \"id\": \"Prueba_de_ubicacion_nueva\",\r\n\t\t\"attributes\": [\r\n\t\t{\r\n\t\t\t\"name\": \"CO\",\r\n            \"type\": \"Number\",\r\n            \"value\": \"10.626428598980013\"\r\n        },\r\n        {\r\n\t\t\t\"name\": \"H2S\",\r\n            \"type\": \"Number\",\r\n            \"value\": \"99.87472597094806\"\r\n        },\r\n        {\r\n    \t\t\"name\":\"NO2\",\r\n            \"type\": \"Number\",\r\n            \"value\": \"16.822380869627054\"\r\n        },\r\n        {\r\n    \t\t\"name\":\"O3\",\r\n            \"type\": \"Number\",\r\n            \"value\": \"55.87127377401371\"\r\n        },\r\n        {\r\n    \t\t\"name\":\"SO2\",\r\n            \"type\": \"Number\",\r\n            \"value\": \"50.49543883170808\"\r\n        },\r\n        {\r\n    \t\t\"name\":\"batteryLevel\",\r\n            \"type\": \"Integer\",\r\n            \"value\": \"10\"\r\n        },\r\n        {\r\n    \t\t\"name\":\"humidity0\",\r\n            \"type\": \"Number\",\r\n            \"value\": \"55.637690554388904\"\r\n        },\r\n        {\r\n    \t\t\"name\":\"humidity1\",\r\n            \"type\": \"Number\",\r\n            \"value\": \"54.68126740585568\"\r\n        },\r\n        {\r\n    \t\t\"name\":\"nearDevicesHour\",\r\n            \"type\": \"Integer\",\r\n            \"value\": \"39\"\r\n        },\r\n        {\r\n    \t\t\"name\":\"nearDevicesMinute\",\r\n            \"type\": \"Integer\",\r\n            \"value\": \"8\"\r\n        },\r\n        {\r\n    \t\t\"name\":\"nearDevicesTenMinutes\",\r\n            \"type\": \"Integer\",\r\n            \"value\": \"51\"\r\n        },\r\n        {\r\n    \t\t\"name\":\"noise\",\r\n            \"type\": \"Number\",\r\n            \"value\": \"74.0\"\r\n        },\r\n        {\r\n    \t\t\"name\":\"temperature0\",\r\n            \"type\": \"Number\",\r\n            \"value\": \"25.233592694220384\"\r\n        \t}\r\n        \t]\r\n\t\t}\r\n    ],\r\n    \"updateAction\": \"UPDATE\"\r\n}"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/updateContext",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"updateContext"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create entity v1",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"type\": \"SmartSpot\",\r\n\t\"attributes\": [\r\n\t\t{\r\n\t\t\t\"name\": \"CO\",\r\n            \"type\": \"Number\",\r\n            \"value\": \"9.626428598980013\"\r\n        },\r\n        {\r\n\t\t\t\"name\": \"H2S\",\r\n            \"type\": \"Number\",\r\n            \"value\": \"99.87472597094806\"\r\n        },\r\n        {\r\n    \t\t\"name\":\"NO2\",\r\n            \"type\": \"Number\",\r\n            \"value\": \"16.822380869627054\"\r\n        },\r\n        {\r\n    \t\t\"name\":\"O3\",\r\n            \"type\": \"Number\",\r\n            \"value\": \"55.87127377401371\"\r\n        },\r\n        {\r\n    \t\t\"name\":\"SO2\",\r\n            \"type\": \"Number\",\r\n            \"value\": \"50.49543883170808\"\r\n        },\r\n        {\r\n    \t\t\"name\":\"batteryLevel\",\r\n            \"type\": \"Integer\",\r\n            \"value\": \"10\"\r\n        },\r\n        {\r\n    \t\t\"name\":\"humidity0\",\r\n            \"type\": \"Number\",\r\n            \"value\": \"55.637690554388904\"\r\n        },\r\n        {\r\n    \t\t\"name\":\"humidity1\",\r\n            \"type\": \"Number\",\r\n            \"value\": \"54.68126740585568\"\r\n        },\r\n        {\r\n    \t\t\"name\":\"nearDevicesHour\",\r\n            \"type\": \"Integer\",\r\n            \"value\": \"39\"\r\n        },\r\n        {\r\n    \t\t\"name\":\"nearDevicesMinute\",\r\n            \"type\": \"Integer\",\r\n            \"value\": \"8\"\r\n        },\r\n        {\r\n    \t\t\"name\":\"nearDevicesTenMinutes\",\r\n            \"type\": \"Integer\",\r\n            \"value\": \"51\"\r\n        },\r\n        {\r\n    \t\t\"name\":\"noise\",\r\n            \"type\": \"Number\",\r\n            \"value\": \"74.0\"\r\n        },\r\n        {\r\n    \t\t\"name\":\"temperature0\",\r\n            \"type\": \"Number\",\r\n            \"value\": \"25.233592694220384\"\r\n        \t}\r\n       \t]\r\n}"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/contextEntities/{{fiware-entity}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"contextEntities",
+										"{{fiware-entity}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve entity v1",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/contextEntities/{{fiware-entity}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"contextEntities",
+										"{{fiware-entity}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve entity as object v1",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/contextEntities/{{fiware-entity}}?attributeFormat=object",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"contextEntities",
+										"{{fiware-entity}}"
+									],
+									"query": [
+										{
+											"key": "attributeFormat",
+											"value": "object",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve entity other v1",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"entities\": [\r\n        {\r\n            \"type\": \"SmartSpot\",\r\n            \"isPattern\": \"false\",\r\n            \"id\": \"Prueba_de_ubicacion\"\r\n        }\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/queryContext",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"queryContext"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve entity as object other v1",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"entities\": [\r\n        {\r\n            \"type\": \"SmartSpot\",\r\n            \"isPattern\": \"false\",\r\n            \"id\": \"Prueba_de_ubicacion\"\r\n        }\r\n    ]\r\n} "
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/queryContext?attributeFormat=object",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"queryContext"
+									],
+									"query": [
+										{
+											"key": "attributeFormat",
+											"value": "object",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve entities v1",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/contextEntities",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"contextEntities"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve entities as object v1",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/contextEntities?attributeFormat=object",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"contextEntities"
+									],
+									"query": [
+										{
+											"key": "attributeFormat",
+											"value": "object",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve entities for type v1",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"entities\": [\r\n        {\r\n            \"type\": \"SmartSpot\",\r\n            \"isPattern\": \"false\",\r\n            \"id\": \"Prueba_de_ubicacion\"\r\n        }\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/contextEntityTypes/{{fiware-type}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"contextEntityTypes",
+										"{{fiware-type}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve entities for type as object v1",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"entities\": [\r\n        {\r\n            \"type\": \"SmartSpot\",\r\n            \"isPattern\": \"false\",\r\n            \"id\": \"Prueba_de_ubicacion\"\r\n        }\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/contextEntityTypes/{{fiware-service}}?attributeFormat=object",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"contextEntityTypes",
+										"{{fiware-service}}"
+									],
+									"query": [
+										{
+											"key": "attributeFormat",
+											"value": "object",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete entity v1",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/contextEntities/{{fiware-entity}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"contextEntities",
+										"{{fiware-entity}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create/update entity attribute v1",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"type\": \"SmartSpot\",\r\n\t\"attributes\": [\r\n\t\t{\r\n\t\t\t\"name\": \"CO\",\r\n            \"type\": \"Number\",\r\n            \"value\": \"13.93201022\"\r\n        },\r\n        {\r\n\t\t\t\"name\": \"H2S\",\r\n            \"type\": \"Number\",\r\n            \"value\": \"14.232221002\"\r\n        },\r\n        {\r\n\t\t\t\"name\": \"H2M\",\r\n            \"type\": \"Number\",\r\n            \"value\": \"14.232221002\"\r\n        },\r\n        {\r\n    \t\t\"name\":\"temperature0\",\r\n            \"type\": \"Number\",\r\n            \"value\": \"15.2444223\"\r\n        \t}\r\n       \t]\r\n}"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/contextEntities/{{fiware-entity}}/attributes",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"contextEntities",
+										"{{fiware-entity}}",
+										"attributes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve entity attribute v1",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/contextEntities/{{fiware-entity}}/attributes/{{fiware-attr}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"contextEntities",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve entity attribute as object v1",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/contextEntities/{{fiware-entity}}/attributes/{{fiware-attr}}?attributeFormat=object",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"contextEntities",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "attributeFormat",
+											"value": "object",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve entities attribute for type as object v1",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"entities\": [\r\n        {\r\n            \"type\": \"SmartSpot\",\r\n            \"isPattern\": \"false\",\r\n            \"id\": \"Prueba_de_ubicacion\"\r\n        }\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/contextEntityTypes/{{fiware-type}}/attributes/{{fiware-attr}}?attributeFormat=object",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"contextEntityTypes",
+										"{{fiware-type}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "attributeFormat",
+											"value": "object",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve entities attribute for type v1",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"entities\": [\r\n        {\r\n            \"type\": \"SmartSpot\",\r\n            \"isPattern\": \"false\",\r\n            \"id\": \"Prueba_de_ubicacion\"\r\n        }\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/contextEntityTypes/{{fiware-service}}/attributes/{{fiware-attr}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"contextEntityTypes",
+										"{{fiware-service}}",
+										"attributes",
+										"{{fiware-attr}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete entity attribute v1",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/contextEntities/{{fiware-entity}}/attributes/{{fiware-attr}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"contextEntities",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "types",
+					"item": [
+						{
+							"name": "retrieve type v1",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/contextTypes/{{fiware-service}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"contextTypes",
+										"{{fiware-service}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve types v1",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/contextTypes/",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"contextTypes",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "subscriptions",
+					"item": [
+						{
+							"name": "create information subscription v1",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"entities\": [\n        {\n            \"type\": \"SmartSpot\",\n            \"isPattern\": \"true\",\n            \"id\": \".*\"\n        }\n    ],\n    \"attributes\": [\n        \"batteryLevel\",\n        \"temperature0\",\n        \"temperature1\",\n        \"humidity0\",\n        \"humidity1\",\n        \"noise\",\n        \"NO2\",\n        \"SO2\",\n        \"O3\",\n        \"H2S\",\n        \"CO\",\n        \"nearDevicesMinute\",\n        \"nearDevicesTenMinutes\",\n        \"nearDevicesHour\"\n    ],\n    \"reference\": \"http://cygnus:5050/notify\",\n    \"duration\": \"P1M\"\n}"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/registry/subscribeContextAvailability",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"registry",
+										"subscribeContextAvailability"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create information subscription other v1",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"entities\": [\r\n        {\r\n            \"type\": \"SmartSpot\",\r\n            \"isPattern\": \"true\",\r\n            \"id\": \".*\"\r\n        }\r\n    ],\r\n    \"attributes\": [\r\n        \"batteryLevel\",\r\n        \"temperature0\",\r\n        \"temperature1\",\r\n        \"humidity0\",\r\n        \"humidity1\",\r\n        \"noise\",\r\n        \"NO2\",\r\n        \"SO2\",\r\n        \"O3\",\r\n        \"H2S\",\r\n        \"CO\",\r\n        \"nearDevicesMinute\",\r\n        \"nearDevicesTenMinutes\",\r\n        \"nearDevicesHour\"\r\n    ],\r\n    \"reference\": \"http://cygnus:5050/notify\",\r\n    \"duration\": \"P1M\"\r\n}"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/registry/contextAvailabilitySubscriptions",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"registry",
+										"contextAvailabilitySubscriptions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update information subscription other v1",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"entities\": [\r\n        {\r\n            \"type\": \"SmartSpot\",\r\n            \"isPattern\": \"true\",\r\n            \"id\": \".*\"\r\n        }\r\n    ],\r\n    \"duration\": \"P1M\",\r\n    \"subscriptionId\": \"5a7973b3777fc523840b8445\"\r\n}"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/registry/contextAvailabilitySubscriptions/{{fiware-subscription}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"registry",
+										"contextAvailabilitySubscriptions",
+										"{{fiware-subscription}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update information subscription v1",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"entities\": [\r\n        {\r\n            \"type\": \"SmartSpot\",\r\n            \"isPattern\": \"true\",\r\n            \"id\": \".*\"\r\n        }\r\n    ],\r\n    \"duration\": \"P1M\",\r\n    \"subscriptionId\": \"5a79be7bc14a5c6a89812cc4\"\r\n}"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/registry/updateContextAvailabilitySubscription",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"registry",
+										"updateContextAvailabilitySubscription"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete information subscription v1",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"subscriptionId\": \"5a79be7bc14a5c6a89812cc4\"\r\n}"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/registry/unsubscribeContextAvailability",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"registry",
+										"unsubscribeContextAvailability"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete information subscription other v1",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/registry/contextAvailabilitySubscriptions/{{fiware-subscription}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"registry",
+										"contextAvailabilitySubscriptions",
+										"{{fiware-subscription}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create subscription v1",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"entities\": [\n        {\n            \"type\": \"SmartSpot\",\n            \"isPattern\": \"true\",\n            \"id\": \".*\"\n        }\n    ],\n    \"attributes\": [\n        \"batteryLevel\",\n        \"temperature0\",\n        \"temperature1\",\n        \"humidity0\",\n        \"humidity1\",\n        \"noise\",\n        \"NO2\",\n        \"SO2\",\n        \"O3\",\n        \"H2S\",\n        \"CO\",\n        \"nearDevicesMinute\",\n        \"nearDevicesTenMinutes\",\n        \"nearDevicesHour\"\n    ],             \n    \"reference\": \"http://cygnus:5050/notify\",\n    \"duration\": \"P1M\"\n}    "
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/subscribeContext",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"subscribeContext"
+									]
+								},
+								"description": "Esta petición crea una suscripción en Orion estableciendo como dirección la url del callback de cygnus. \nentities: se establece el type, si se usa una regex y en el caso de ser true, .* es equivalente a any.\nattributes: se deben añadir cada uno de los atributos para los que se quiere recibir una notificación.\nreference: url callback.\nduration: tiempo durante el cuál la suscripción funcionará. P1M -> 1 month."
+							},
+							"response": []
+						},
+						{
+							"name": "create subscription other v1",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"entities\": [\n        {\n            \"type\": \"SmartSpot\",\n            \"isPattern\": \"true\",\n            \"id\": \".*\"\n        }\n    ],\n    \"attributes\": [\n        \"batteryLevel\",\n        \"temperature0\",\n        \"temperature1\",\n        \"humidity0\",\n        \"humidity1\",\n        \"noise\",\n        \"NO2\",\n        \"SO2\",\n        \"O3\",\n        \"H2S\",\n        \"CO\",\n        \"nearDevicesMinute\",\n        \"nearDevicesTenMinutes\",\n        \"nearDevicesHour\"\n    ],             \n    \"reference\": \"http://cygnus:5050/notify\",\n    \"duration\": \"P1M\"\n}    "
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/contextSubscriptions",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"contextSubscriptions"
+									]
+								},
+								"description": "Esta petición crea una suscripción en Orion estableciendo como dirección la url del callback de cygnus. \nentities: se establece el type, si se usa una regex y en el caso de ser true, .* es equivalente a any.\nattributes: se deben añadir cada uno de los atributos para los que se quiere recibir una notificación.\nreference: url callback.\nduration: tiempo durante el cuál la suscripción funcionará. P1M -> 1 month."
+							},
+							"response": []
+						},
+						{
+							"name": "update subscription v1",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"subscriptionId\": \"5a787e6c777fc523840b8440\",\r\n    \"duration\": \"P2M\"\r\n}"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/updateContextSubscription",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"updateContextSubscription"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update subscription other v1",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"subscriptionId\": \"5a796ff6777fc523840b8442\",\r\n    \"duration\": \"P2M\"\r\n}"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/contextSubscriptions/{{fiware-subscription}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"contextSubscriptions",
+										"{{fiware-subscription}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete subscription v1",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v1/contextSubscriptions/{{fiware-subscription}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v1",
+										"contextSubscriptions",
+										"{{fiware-subscription}}"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "v2",
+			"item": [
+				{
+					"name": "check-is-alive",
+					"item": [
+						{
+							"name": "retrieve version",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/version",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"version"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "entities",
+					"item": [
+						{
+							"name": "create entity v2",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"Prueba_de_ubicacion_5\",\n  \"type\": \"SmartSpot\",\n   \"CO\": {\n            \"type\": \"Number\",\n            \"value\": \"9.626428598980013\",\n            \"metadata\": {}\n        },\n   \"H2S\": {\n            \"type\": \"Number\",\n            \"value\": \"99.87472597094806\",\n            \"metadata\": {}\n        },\n    \"NO2\": {\n            \"type\": \"Number\",\n            \"value\": \"16.822380869627054\",\n            \"metadata\": {}\n        },\n    \"O3\": {\n            \"type\": \"Number\",\n            \"value\": \"55.87127377401371\",\n            \"metadata\": {}\n        },\n    \"SO2\": {\n            \"type\": \"Number\",\n            \"value\": \"50.49543883170808\",\n            \"metadata\": {}\n        },\n    \"batteryLevel\": {\n            \"type\": \"Integer\",\n            \"value\": \"10\",\n            \"metadata\": {}\n        },\n    \"humidity0\": {\n            \"type\": \"Number\",\n            \"value\": \"55.637690554388904\",\n            \"metadata\": {}\n        },\n    \"humidity1\": {\n            \"type\": \"Number\",\n            \"value\": \"54.68126740585568\",\n            \"metadata\": {}\n        },\n    \"nearDevicesHour\": {\n            \"type\": \"Integer\",\n            \"value\": \"39\",\n            \"metadata\": {}\n        },\n    \"nearDevicesMinute\": {\n            \"type\": \"Integer\",\n            \"value\": \"8\",\n            \"metadata\": {}\n        },\n    \"nearDevicesTenMinutes\": {\n            \"type\": \"Integer\",\n            \"value\": \"51\",\n            \"metadata\": {}\n        },\n    \"noise\": {\n            \"type\": \"Number\",\n            \"value\": \"74.0\",\n            \"metadata\": {}\n        },\n    \"temperature0\": {\n            \"type\": \"Number\",\n            \"value\": \"25.233592694220384\",\n            \"metadata\": {}\n        }\n}"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v2/entities",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v2",
+										"entities"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve entity v2",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v2/entities/{{fiware-entity}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v2",
+										"entities",
+										"{{fiware-entity}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve entity as data model v2",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v2/entities/{{fiware-entity}}?options=keyValues",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v2",
+										"entities",
+										"{{fiware-entity}}"
+									],
+									"query": [
+										{
+											"key": "options",
+											"value": "keyValues",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve entities v2",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v2/entities?limit=50",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v2",
+										"entities"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "50",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve entities as data model v2",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v2/entities?options=keyValues&limit=50",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v2",
+										"entities"
+									],
+									"query": [
+										{
+											"key": "options",
+											"value": "keyValues",
+											"equals": true
+										},
+										{
+											"key": "limit",
+											"value": "50",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update entity v2",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"CO\": {\n  \t    \"type\": \"Number\",\n    \"value\": 26.5\n  }\n\n}"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v2/entities/{{fiware-entity}}/attrs",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v2",
+										"entities",
+										"{{fiware-entity}}",
+										"attrs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete entity v2",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v2/entities/{{fiware-entity}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v2",
+										"entities",
+										"{{fiware-entity}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create attribute for entity v2",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nuevoAtributo\": {\n    \"value\": 26.5,\n    \"type\": \"Float\"\n  }\n}"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v2/entities/{{fiware-entity}}/attrs/",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v2",
+										"entities",
+										"{{fiware-entity}}",
+										"attrs",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve entity attribute v2",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v2/entities/{{fiware-entity}}/attrs/{{fiware-attr}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v2",
+										"entities",
+										"{{fiware-entity}}",
+										"attrs",
+										"{{fiware-attr}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve entity attribute as data model v2",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v2/entities/{{fiware-entity}}/attrs/{{fiware-attr}}?options=keyValues",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v2",
+										"entities",
+										"{{fiware-entity}}",
+										"attrs",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "options",
+											"value": "keyValues",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete attribute for entity v2",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v2/entities/{{fiware-entity}}/attrs/{{fiware-attr}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v2",
+										"entities",
+										"{{fiware-entity}}",
+										"attrs",
+										"{{fiware-attr}}"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "types",
+					"item": [
+						{
+							"name": "retrieve type v2",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v2/types/{{fiware-service}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v2",
+										"types",
+										"{{fiware-service}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve types v2",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v2/types",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v2",
+										"types"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "subscriptions",
+					"item": [
+						{
+							"name": "create subscription v2",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"description\":\"test\",\n  \"subject\":{\n    \"entities\": [\n      {\n        \"id\":\"HOP240ac403f392:AirQualityObserved\",\n        \"type\":\"AirQualityObserved\"\n      }\n      ],\n    \"condition\": {\n      \"attrs\": [\n        \"temperature\"\n      ]\n    }\n  },\n  \"notification\": {\n    \"http\": {\n      \"url\":\"http://207.249.127.124:8080/back-sdk/alerts\",\n      \"method\":\"POST\"\n    },\n    \"attrsFormat\": \"keyValues\",\n    \"attrs\": [\n      \"id\",\n      \"dateObserved\",\n      \"temperature\"\n      ]\n  },\n  \"expires\":\"2020-04-05T14:00:00Z\",\n  \"throttling\":1\n}"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v2/subscriptions",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v2",
+										"subscriptions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve subscriptions v2",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"description\":\"test\",\n  \"subject\":{\n    \"entities\": [\n      {\n        \"id\":\"HOP240ac403f392:AirQualityObserved\",\n        \"type\":\"AirQualityObserved\"\n      }\n      ],\n    \"condition\": {\n      \"attrs\": [\n        \"temperature\"\n      ]\n    }\n  },\n  \"notification\": {\n    \"http\": {\n      \"url\":\"http://207.249.127.124:8080/back-sdk/alerts\",\n      \"method\":\"POST\"\n    },\n    \"attrsFormat\": \"keyValues\",\n    \"attrs\": [\n      \"id\",\n      \"dateObserved\",\n      \"temperature\"\n      ]\n  },\n  \"expires\":\"2020-04-05T14:00:00Z\",\n  \"throttling\":1\n}"
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v2/subscriptions",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v2",
+										"subscriptions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "remove suscription v2",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-orion}}/v2/subscriptions/{{fiware-subscription}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-orion}}",
+									"path": [
+										"v2",
+										"subscriptions",
+										"{{fiware-subscription}}"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "real use-cases",
+			"item": [
+				{
+					"name": "modify physical url",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "{{fiware-service}}"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "{{fiware-servicepath}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contextElements\": [\r\n        {\r\n            \"type\": \"SmartSpot\",\r\n            \"isPattern\": \"false\",\r\n            \"id\": \"HOP240ac4105726:SmartSpot\",\r\n            \"attributes\": [\r\n                {\r\n                    \"name\": \"physicalUrl\",\r\n                    \"type\": \"String\",\r\n                    \"value\": \"https://www.as.com\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"updateAction\": \"UPDATE\"\r\n}"
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port-orion}}/v1/updateContext",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port-orion}}",
+							"path": [
+								"v1",
+								"updateContext"
+							]
+						},
+						"description": "Esta petición crea una suscripción en Orion estableciendo como dirección la url del callback de cygnus. \nentities: se establece el type, si se usa una regex y en el caso de ser true, .* es equivalente a any.\nattributes: se deben añadir cada uno de los atributos para los que se quiere recibir una notificación.\nreference: url callback.\nduration: tiempo durante el cuál la suscripción funcionará. P1M -> 1 month."
+					},
+					"response": []
+				},
+				{
+					"name": "create QuantumLeap subscription",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "fiware-service",
+								"value": "{{fiware-service}}"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "{{fiware-servicepath}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Test subscription\",\n    \"subject\": {\n        \"entities\": [\n        {\n            \"idPattern\": \".*\",\n            \"type\": \"SmartSpot\"\n        }\n        ]\n    },\n    \"notification\": {\n        \"http\": {\n            \"url\": \"http://192.168.1.192:8668/notify\"\n        },\n        \"attrs\": [\n        \"batteryLevel\",\n        \"temperature0\",\n        \"temperature1\",\n        \"humidity0\",\n        \"humidity1\",\n        \"noise\",\n        \"NO2\",\n        \"SO2\",\n        \"O3\",\n        \"H2S\",\n        \"CO\",\n        \"nearDevicesMinute\",\n        \"nearDevicesTenMinutes\",\n        \"nearDevicesHour\"\n        ],\n        \"metadata\": [\"dateCreated\", \"dateModified\"]\n    }\n}"
+						},
+						"url": {
+							"raw": "http://{{url}}:{{port-orion}}/v2/subscriptions",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port-orion}}",
+							"path": [
+								"v2",
+								"subscriptions"
+							]
+						},
+						"description": null
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

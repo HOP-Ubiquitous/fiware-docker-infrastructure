@@ -1,0 +1,1731 @@
+{
+	"info": {
+		"name": "fiware-sth",
+		"_postman_id": "b7b5a986-e00c-d61d-eb8d-e5ec4632c772",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "raw values",
+			"item": [
+				{
+					"name": "retrieve raw values ",
+					"item": [
+						{
+							"name": "retrieve raw values with pagination",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?hLimit={{fiware-limit}}&hOffset={{fiware-offset}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "hLimit",
+											"value": "{{fiware-limit}}",
+											"equals": true
+										},
+										{
+											"key": "hOffset",
+											"value": "{{fiware-offset}}",
+											"equals": true
+										}
+									]
+								},
+								"description": "Realiza una petición GET sobre la dirección y puerto en que se encuentra desplegado STH estableciendo en la uri: type, entity_id, attributes. \nMás información sobre los parámetros puede encontrarse en:\nhttps://fiware-sth-comet.readthedocs.io/en/latest/raw-data-retrieval/index.html\nEs necesario añadir como cabeceras el fiware-service y fiware-servicepath sobre el que se pregunta. Si no se conoce lanzar docker-compose en primer plano y ver los logs de cygnus puede ayudar"
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve raw values with pagination and filetype",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?hLimit={{fiware-limit}}&hOffset={{fiware-offset}}&filetype={{fiware-filetype}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "hLimit",
+											"value": "{{fiware-limit}}",
+											"equals": true
+										},
+										{
+											"key": "hOffset",
+											"value": "{{fiware-offset}}",
+											"equals": true
+										},
+										{
+											"key": "filetype",
+											"value": "{{fiware-filetype}}",
+											"equals": true
+										}
+									]
+								},
+								"description": "Realiza una petición GET sobre la dirección y puerto en que se encuentra desplegado STH estableciendo en la uri: type, entity_id, attributes. \nMás información sobre los parámetros puede encontrarse en:\nhttps://fiware-sth-comet.readthedocs.io/en/latest/raw-data-retrieval/index.html\nEs necesario añadir como cabeceras el fiware-service y fiware-servicepath sobre el que se pregunta. Si no se conoce lanzar docker-compose en primer plano y ver los logs de cygnus puede ayudar"
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve n raw values",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?lastN={{fiware-lastN}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "lastN",
+											"value": "{{fiware-lastN}}",
+											"equals": true
+										}
+									]
+								},
+								"description": "Realiza una petición GET sobre la dirección y puerto en que se encuentra desplegado STH estableciendo en la uri: type, entity_id, attributes. \nMás información sobre los parámetros puede encontrarse en:\nhttps://fiware-sth-comet.readthedocs.io/en/latest/raw-data-retrieval/index.html\nEs necesario añadir como cabeceras el fiware-service y fiware-servicepath sobre el que se pregunta. Si no se conoce lanzar docker-compose en primer plano y ver los logs de cygnus puede ayudar"
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve n raw values with pagination",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?hLimit={{fiware-limit}}&hOffset={{fiware-offset}}&lastN={{fiware-lastN}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "hLimit",
+											"value": "{{fiware-limit}}",
+											"equals": true
+										},
+										{
+											"key": "hOffset",
+											"value": "{{fiware-offset}}",
+											"equals": true
+										},
+										{
+											"key": "lastN",
+											"value": "{{fiware-lastN}}",
+											"equals": true
+										}
+									]
+								},
+								"description": "Realiza una petición GET sobre la dirección y puerto en que se encuentra desplegado STH estableciendo en la uri: type, entity_id, attributes. \nMás información sobre los parámetros puede encontrarse en:\nhttps://fiware-sth-comet.readthedocs.io/en/latest/raw-data-retrieval/index.html\nEs necesario añadir como cabeceras el fiware-service y fiware-servicepath sobre el que se pregunta. Si no se conoce lanzar docker-compose en primer plano y ver los logs de cygnus puede ayudar"
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve n raw values with filetype",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?lastN={{fiware-lastN}}&filetype={{fiware-filetype}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "lastN",
+											"value": "{{fiware-lastN}}",
+											"equals": true
+										},
+										{
+											"key": "filetype",
+											"value": "{{fiware-filetype}}",
+											"equals": true
+										}
+									]
+								},
+								"description": "Realiza una petición GET sobre la dirección y puerto en que se encuentra desplegado STH estableciendo en la uri: type, entity_id, attributes. \nMás información sobre los parámetros puede encontrarse en:\nhttps://fiware-sth-comet.readthedocs.io/en/latest/raw-data-retrieval/index.html\nEs necesario añadir como cabeceras el fiware-service y fiware-servicepath sobre el que se pregunta. Si no se conoce lanzar docker-compose en primer plano y ver los logs de cygnus puede ayudar"
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve n raw values with pagination and filetype",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?hLimit={{fiware-limit}}&hOffset={{fiware-offset}}&lastN={{fiware-lastN}}&filetype={{fiware-filetype}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "hLimit",
+											"value": "{{fiware-limit}}",
+											"equals": true
+										},
+										{
+											"key": "hOffset",
+											"value": "{{fiware-offset}}",
+											"equals": true
+										},
+										{
+											"key": "lastN",
+											"value": "{{fiware-lastN}}",
+											"equals": true
+										},
+										{
+											"key": "filetype",
+											"value": "{{fiware-filetype}}",
+											"equals": true
+										}
+									]
+								},
+								"description": "Realiza una petición GET sobre la dirección y puerto en que se encuentra desplegado STH estableciendo en la uri: type, entity_id, attributes. \nMás información sobre los parámetros puede encontrarse en:\nhttps://fiware-sth-comet.readthedocs.io/en/latest/raw-data-retrieval/index.html\nEs necesario añadir como cabeceras el fiware-service y fiware-servicepath sobre el que se pregunta. Si no se conoce lanzar docker-compose en primer plano y ver los logs de cygnus puede ayudar"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "retrieve values between two dates",
+					"item": [
+						{
+							"name": "retrieve raw value between two dates with pagination",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?dateFrom={{fiware-dateFrom}}&dateTo={{fiware-dateTo}}&hLimit={{fiware-limit}}&hOffset={{fiware-offset}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "dateFrom",
+											"value": "{{fiware-dateFrom}}",
+											"equals": true
+										},
+										{
+											"key": "dateTo",
+											"value": "{{fiware-dateTo}}",
+											"equals": true
+										},
+										{
+											"key": "hLimit",
+											"value": "{{fiware-limit}}",
+											"equals": true
+										},
+										{
+											"key": "hOffset",
+											"value": "{{fiware-offset}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve raw value between two dates with pagination and filetype",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?dateFrom={{fiware-dateFrom}}&dateTo={{fiware-dateTo}}&hLimit={{fiware-limit}}&hOffset={{fiware-offset}}&filetype={{fiware-filetype}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "dateFrom",
+											"value": "{{fiware-dateFrom}}",
+											"equals": true
+										},
+										{
+											"key": "dateTo",
+											"value": "{{fiware-dateTo}}",
+											"equals": true
+										},
+										{
+											"key": "hLimit",
+											"value": "{{fiware-limit}}",
+											"equals": true
+										},
+										{
+											"key": "hOffset",
+											"value": "{{fiware-offset}}",
+											"equals": true
+										},
+										{
+											"key": "filetype",
+											"value": "{{fiware-filetype}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve n raw values between two dates",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?dateFrom={{fiware-dateFrom}}&dateTo={{fiware-dateTo}}&lastN={{fiware-lastN}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "dateFrom",
+											"value": "{{fiware-dateFrom}}",
+											"equals": true
+										},
+										{
+											"key": "dateTo",
+											"value": "{{fiware-dateTo}}",
+											"equals": true
+										},
+										{
+											"key": "lastN",
+											"value": "{{fiware-lastN}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve n raw values between two dates with pagination",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?dateFrom={{fiware-dateFrom}}&dateTo={{fiware-dateTo}}&lastN={{fiware-lastN}}&hLimit={{fiware-limit}}&hOffset={{fiware-offset}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "dateFrom",
+											"value": "{{fiware-dateFrom}}",
+											"equals": true
+										},
+										{
+											"key": "dateTo",
+											"value": "{{fiware-dateTo}}",
+											"equals": true
+										},
+										{
+											"key": "lastN",
+											"value": "{{fiware-lastN}}",
+											"equals": true
+										},
+										{
+											"key": "hLimit",
+											"value": "{{fiware-limit}}",
+											"equals": true
+										},
+										{
+											"key": "hOffset",
+											"value": "{{fiware-offset}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve n raw values between two dates with filetype",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?dateFrom={{fiware-dateFrom}}&dateTo={{fiware-dateTo}}&lastN={{fiware-lastN}}&filetype={{fiware-filetype}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "dateFrom",
+											"value": "{{fiware-dateFrom}}",
+											"equals": true
+										},
+										{
+											"key": "dateTo",
+											"value": "{{fiware-dateTo}}",
+											"equals": true
+										},
+										{
+											"key": "lastN",
+											"value": "{{fiware-lastN}}",
+											"equals": true
+										},
+										{
+											"key": "filetype",
+											"value": "{{fiware-filetype}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve n raw values between two dates with pagination and filetype",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?dateFrom={{fiware-dateFrom}}&dateTo={{fiware-dateTo}}&lastN={{fiware-lastN}}&hLimit={{fiware-limit}}&hOffset={{fiware-offset}}&filetype={{fiware-filetype}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "dateFrom",
+											"value": "{{fiware-dateFrom}}",
+											"equals": true
+										},
+										{
+											"key": "dateTo",
+											"value": "{{fiware-dateTo}}",
+											"equals": true
+										},
+										{
+											"key": "lastN",
+											"value": "{{fiware-lastN}}",
+											"equals": true
+										},
+										{
+											"key": "hLimit",
+											"value": "{{fiware-limit}}",
+											"equals": true
+										},
+										{
+											"key": "hOffset",
+											"value": "{{fiware-offset}}",
+											"equals": true
+										},
+										{
+											"key": "filetype",
+											"value": "{{fiware-filetype}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "retrieve raw values after Date",
+					"item": [
+						{
+							"name": "retrieve raw values after date with pagination",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?dateFrom={{fiware-dateFrom}}&hLimit={{fiware-limit}}&hOffset={{fiware-offset}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "dateFrom",
+											"value": "{{fiware-dateFrom}}",
+											"equals": true
+										},
+										{
+											"key": "hLimit",
+											"value": "{{fiware-limit}}",
+											"equals": true
+										},
+										{
+											"key": "hOffset",
+											"value": "{{fiware-offset}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve raw values after date with pagination with filetype",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?dateFrom={{fiware-dateFrom}}&hLimit={{fiware-limit}}&hOffset={{fiware-offset}}&filetype={{fiware-filetype}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "dateFrom",
+											"value": "{{fiware-dateFrom}}",
+											"equals": true
+										},
+										{
+											"key": "hLimit",
+											"value": "{{fiware-limit}}",
+											"equals": true
+										},
+										{
+											"key": "hOffset",
+											"value": "{{fiware-offset}}",
+											"equals": true
+										},
+										{
+											"key": "filetype",
+											"value": "{{fiware-filetype}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve n raw values after date",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?dateFrom={{fiware-dateFrom}}&lastN={{fiware-lastN}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "dateFrom",
+											"value": "{{fiware-dateFrom}}",
+											"equals": true
+										},
+										{
+											"key": "lastN",
+											"value": "{{fiware-lastN}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve n raw values after date with filetype",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?dateFrom={{fiware-dateFrom}}&lastN={{fiware-lastN}}&filetype={{fiware-filetype}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "dateFrom",
+											"value": "{{fiware-dateFrom}}",
+											"equals": true
+										},
+										{
+											"key": "lastN",
+											"value": "{{fiware-lastN}}",
+											"equals": true
+										},
+										{
+											"key": "filetype",
+											"value": "{{fiware-filetype}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve n raw values after date with pagination",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?dateFrom={{fiware-dateFrom}}&hLimit={{fiware-limit}}&hOffset={{fiware-offset}}&lastN={{fiware-lastN}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "dateFrom",
+											"value": "{{fiware-dateFrom}}",
+											"equals": true
+										},
+										{
+											"key": "hLimit",
+											"value": "{{fiware-limit}}",
+											"equals": true
+										},
+										{
+											"key": "hOffset",
+											"value": "{{fiware-offset}}",
+											"equals": true
+										},
+										{
+											"key": "lastN",
+											"value": "{{fiware-lastN}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve n raw values after date with pagination and filetype",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?dateFrom={{fiware-dateFrom}}&hLimit={{fiware-limit}}&hOffset={{fiware-offset}}&lastN={{fiware-lastN}}&filetype={{fiware-filetype}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "dateFrom",
+											"value": "{{fiware-dateFrom}}",
+											"equals": true
+										},
+										{
+											"key": "hLimit",
+											"value": "{{fiware-limit}}",
+											"equals": true
+										},
+										{
+											"key": "hOffset",
+											"value": "{{fiware-offset}}",
+											"equals": true
+										},
+										{
+											"key": "lastN",
+											"value": "{{fiware-lastN}}",
+											"equals": true
+										},
+										{
+											"key": "filetype",
+											"value": "{{fiware-filetype}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "retrieve raw values before date",
+					"item": [
+						{
+							"name": "retrieve n raw values before date with pagination and filetype",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?dateTo={{fiware-dateTo}}&hLimit={{fiware-limit}}&hOffset={{fiware-offset}}&lastN={{fiware-lastN}}&filetype={{fiware-filetype}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "dateTo",
+											"value": "{{fiware-dateTo}}",
+											"equals": true
+										},
+										{
+											"key": "hLimit",
+											"value": "{{fiware-limit}}",
+											"equals": true
+										},
+										{
+											"key": "hOffset",
+											"value": "{{fiware-offset}}",
+											"equals": true
+										},
+										{
+											"key": "lastN",
+											"value": "{{fiware-lastN}}",
+											"equals": true
+										},
+										{
+											"key": "filetype",
+											"value": "{{fiware-filetype}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve n raw values before date  with pagination",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?dateTo={{fiware-dateTo}}&hLimit={{fiware-limit}}&hOffset={{fiware-offset}}&lastN={{fiware-lastN}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "dateTo",
+											"value": "{{fiware-dateTo}}",
+											"equals": true
+										},
+										{
+											"key": "hLimit",
+											"value": "{{fiware-limit}}",
+											"equals": true
+										},
+										{
+											"key": "hOffset",
+											"value": "{{fiware-offset}}",
+											"equals": true
+										},
+										{
+											"key": "lastN",
+											"value": "{{fiware-lastN}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve  n raw values before date with filetype",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?dateTo={{fiware-dateTo}}&lastN={{fiware-lastN}}&filetype={{fiware-filetype}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "dateTo",
+											"value": "{{fiware-dateTo}}",
+											"equals": true
+										},
+										{
+											"key": "lastN",
+											"value": "{{fiware-lastN}}",
+											"equals": true
+										},
+										{
+											"key": "filetype",
+											"value": "{{fiware-filetype}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve  n raw values before date",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?dateTo={{fiware-dateTo}}&lastN={{fiware-lastN}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "dateTo",
+											"value": "{{fiware-dateTo}}",
+											"equals": true
+										},
+										{
+											"key": "lastN",
+											"value": "{{fiware-lastN}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve raw values before date with pagination",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?dateTo={{fiware-dateTo}}&hLimit={{fiware-limit}}&hOffset={{fiware-offset}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "dateTo",
+											"value": "{{fiware-dateTo}}",
+											"equals": true
+										},
+										{
+											"key": "hLimit",
+											"value": "{{fiware-limit}}",
+											"equals": true
+										},
+										{
+											"key": "hOffset",
+											"value": "{{fiware-offset}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve raw values before date with pagination and filetype",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?dateTo={{fiware-dateTo}}&hLimit={{fiware-limit}}&hOffset={{fiware-offset}}&filetype={{fiware-filetype}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "dateTo",
+											"value": "{{fiware-dateTo}}",
+											"equals": true
+										},
+										{
+											"key": "hLimit",
+											"value": "{{fiware-limit}}",
+											"equals": true
+										},
+										{
+											"key": "hOffset",
+											"value": "{{fiware-offset}}",
+											"equals": true
+										},
+										{
+											"key": "filetype",
+											"value": "{{fiware-filetype}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "aggregated values",
+			"item": [
+				{
+					"name": "retrieve aggregated values",
+					"item": [
+						{
+							"name": "retrieve aggregated values",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?aggrMethod={{fiware-method}}&aggrPeriod={{fiware-period}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "aggrMethod",
+											"value": "{{fiware-method}}",
+											"equals": true
+										},
+										{
+											"key": "aggrPeriod",
+											"value": "{{fiware-period}}",
+											"equals": true
+										}
+									]
+								},
+								"description": "Realiza una petición GET sobre la dirección y puerto en que se encuentra desplegado STH estableciendo en la uri: type, entity_id, attributes. \nMás información sobre los parámetros puede encontrarse en:\nhttps://fiware-sth-comet.readthedocs.io/en/latest/aggregated-data-retrieval/index.html\nEs necesario añadir como cabeceras el fiware-service y fiware-servicepath sobre el que se pregunta. Si no se conoce lanzar docker-compose en primer plano y ver los logs de cygnus puede ayudar"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "retrieve aggregated values between two dates",
+					"item": [
+						{
+							"name": "retrieve aggregate values between two dates",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?aggrMethod={{fiware-method}}&aggrPeriod={{fiware-period}}&dateFrom={{fiware-dateFrom}}&dateTo={{fiware-dateTo}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "aggrMethod",
+											"value": "{{fiware-method}}",
+											"equals": true
+										},
+										{
+											"key": "aggrPeriod",
+											"value": "{{fiware-period}}",
+											"equals": true
+										},
+										{
+											"key": "dateFrom",
+											"value": "{{fiware-dateFrom}}",
+											"equals": true
+										},
+										{
+											"key": "dateTo",
+											"value": "{{fiware-dateTo}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "retrieve aggregated values after date",
+					"item": [
+						{
+							"name": "retrieve aggregate values after date",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?aggrMethod={{fiware-method}}&aggrPeriod={{fiware-period}}&dateFrom={{fiware-dateFrom}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "aggrMethod",
+											"value": "{{fiware-method}}",
+											"equals": true
+										},
+										{
+											"key": "aggrPeriod",
+											"value": "{{fiware-period}}",
+											"equals": true
+										},
+										{
+											"key": "dateFrom",
+											"value": "{{fiware-dateFrom}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "retrieve aggregated values before date",
+					"item": [
+						{
+							"name": "retrieve aggregate values before date",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "fiware-service",
+										"value": "{{fiware-service}}"
+									},
+									{
+										"key": "fiware-servicepath",
+										"value": "{{fiware-servicepath}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{url}}:{{port-sth}}/STH/v1/contextEntities/type/{{fiware-type}}/id/{{fiware-entity}}/attributes/{{fiware-attr}}?aggrMethod={{fiware-method}}&aggrPeriod={{fiware-period}}&dateTo={{fiware-dateTo}}",
+									"protocol": "http",
+									"host": [
+										"{{url}}"
+									],
+									"port": "{{port-sth}}",
+									"path": [
+										"STH",
+										"v1",
+										"contextEntities",
+										"type",
+										"{{fiware-type}}",
+										"id",
+										"{{fiware-entity}}",
+										"attributes",
+										"{{fiware-attr}}"
+									],
+									"query": [
+										{
+											"key": "aggrMethod",
+											"value": "{{fiware-method}}",
+											"equals": true
+										},
+										{
+											"key": "aggrPeriod",
+											"value": "{{fiware-period}}",
+											"equals": true
+										},
+										{
+											"key": "dateTo",
+											"value": "{{fiware-dateTo}}",
+											"equals": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+	]
+}
