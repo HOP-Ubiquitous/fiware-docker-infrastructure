@@ -64,6 +64,8 @@ Last, the grafana container launchs a web services with user interface in which 
 as data source. A more detailed guide of this services interaction can be found in the use-cases/ directory.
 
 ### Perseo-core and Perseo-fe configuration
+Perseo CEP is a Complex Event Processing (CEP) module. In this module, Perseo-core is the back-end of Perseo CEP, the rule-engine. It checks incoming events and, if any action must be done, it call to Perseo-fe through a POST request. Perseo-fe refresh the set of Perseo-core rule periodically. When Perseo-core send an action to Perseo-fe, it is responsible of send an action vía SMS, e-mail or HTTP. A more detailed guide of this services interaction can be found in the use-cases/ directory.
+**docker-compose.yml** In order for Perseo CEP can send a notification, it must have configured the following servers: SMPP, SMTP and HTTP in docker-compose.yml file contained in the docker-compose/ directory. The environment variables available for Perseo configuration can be foun in this [url](https://github.com/telefonicaid/perseo-fe/blob/master/documentation/configuration.md#environment-variables-configuration).
 
 ## Build, deploy and run
 The architecture building and execution must contains using docker-compose must contains a previous step, the IoT Agent
