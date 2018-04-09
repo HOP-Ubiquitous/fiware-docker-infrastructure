@@ -36,11 +36,11 @@ are explicitly declared in this file. For services with complex configuration a 
 ### IoT Agent configuration
 In order to be able to map the OMA LWM2M information model to OMA NGSI entities, atributes and metadata a configuration
 file is created reflecting the correspondence. **config.js** in the docker-compose/ directory contains two blocks:
-- lwm2m server configuration, specifying aspects like server port, content-format used or the log level of the service;
-- and ngsi configuration, where information about the http server, the storage and the mapping between the protocols are
-specified. 
-On the other hand, a dynamic configuration can be carried out using the service API. The postman collection of this service
+- LwM2M server configuration, specifying aspects like server port, content-format used or the log level of the service.
+- NGSI configuration, where information about the http server, the storage and the mapping between the protocols are
+specified. On the other hand, a dynamic configuration can be carried out using the service API. The postman collection of this service
 provides a skeleton template.
+
 More information about the component can be found in the [LWM2M IoT Agent Guide](http://fiware-iotagent-lwm2m.readthedocs.io/en/latest/).
 
 ### Cygnus configuration
